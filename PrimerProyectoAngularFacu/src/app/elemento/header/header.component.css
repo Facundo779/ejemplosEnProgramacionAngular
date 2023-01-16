@@ -1,0 +1,10 @@
+.estiloTitulo{
+    color: black;
+    font:bold;
+    font-size:30 rem;
+    text-align: center;
+}
+.estiloParrafo{
+    color:white;
+    text-align: center;
+}

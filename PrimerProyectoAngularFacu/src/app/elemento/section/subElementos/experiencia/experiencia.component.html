@@ -1,0 +1,15 @@
+<h3>Ejemplo 2</h3>
+<div>
+    <p>Experiencia laboral</p>
+    <ng-template #temBase>
+        <div #parrafoTemp id="divParrafoTemp" name="divParrafoTemp" nameb="divParrafoTemp">
+        <p style="color: white;">-------------------------</p>
+        <p style="color: white;">{{iterante}}</p>
+        <p #varLT style="color: white;" nameLT='varLT'>Lugar de Trabajo: {{lugarDeTrabajo[0]}}</p>
+        <p #varTR style="color: white;"nameTR='varTR'>Tarea realizada: {{descripcionTarea[0]}}</p>
+        <p style="color: white;">-------------------------</p>
+        </div>
+    </ng-template>
+    <button #editarSeccion type="button" class="btn btn-primary" (click)="modifDatosLab()">Editar elemento</button>
+    <button #nuevaSeccion type="button" class="btn btn-primary" (click)="nuevoTempYseteoAtrib()">Nueva sección</button>
+</div>

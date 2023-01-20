@@ -8,6 +8,7 @@ import { FooterComponent } from './elemento/footer/footer.component';
 import { AcercaDEComponent } from './elemento/section/subElementos/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './elemento/section/subElementos/experiencia/experiencia.component';
 import { FormsModule } from '@angular/forms';
+import { SetAttribTempComponent } from './elemento/section/subElementos/set-attrib-temp/set-attrib-temp.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     SectionComponent,
     FooterComponent,
     AcercaDEComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    SetAttribTempComponent
   ],
   imports: [
     BrowserModule,

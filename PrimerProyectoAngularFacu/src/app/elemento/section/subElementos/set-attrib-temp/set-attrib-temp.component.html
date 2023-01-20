@@ -1,0 +1,15 @@
+<h3 class="mt-3 border-2 border-top">Ejemplo 3: Setear Atributos de template</h3>
+<div>
+    <ng-template #temBase>
+        <div #parrafoTemp id="divParrafoTemp" name="divParrafoTemp" nameb="divParrafoTemp">
+        <p style="color: black;">-------------------------</p>
+        <p style="color: black;">{{iterante}}</p>
+        <p #varLT style="color: black;" nameLT='varLT'>Lugar de Trabajo: {{lugarDeTrabajo[0]}}</p>
+        <p #varTR style="color: black;"nameTR='varTR'>Tarea realizada: {{descripcionTarea[0]}}</p>
+        <p style="color: black;">-------------------------</p>
+        </div>
+    </ng-template>
+    <button #editarSeccion type="button" class="btn btn-primary" (click)="modifDatosLab()">Editar elemento</button>
+    <button #nuevaSeccion type="button" class="btn btn-primary" (click)="nuevoTempYseteoAtrib()">Nueva sección</button>
+</div>
+

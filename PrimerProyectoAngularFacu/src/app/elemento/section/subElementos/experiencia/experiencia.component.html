@@ -4,16 +4,16 @@
     <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
         <p>Empleos cargados: </p>
           <ul>
-            <li>EmpleoUno: {{lugarDeTrabajo[0]}}</li>
-            <li>TareaUno: {{descripcionTarea[0]}}</li>
+            <li #liLT>EmpleoUno: {{lugarDeTrabajo[0]}}</li>
+            <li #liDT>TareaUno: {{descripcionTarea[0]}}</li>
           </ul>
           <ul>
-            <li>EmpleoDos: {{lugarDeTrabajo[1]}}</li>
-            <li>TareaDos: {{descripcionTarea[1]}}</li>
+            <li #liLT>EmpleoDos: {{lugarDeTrabajo[1]}}</li>
+            <li #liDT>TareaDos: {{descripcionTarea[1]}}</li>
           </ul>
           <ul>
-            <li>EmpleoTres: {{lugarDeTrabajo[2]}}</li>
-            <li>TareaTres: {{descripcionTarea[2]}}</li>
+            <li #liLT>EmpleoTres: {{lugarDeTrabajo[2]}}</li>
+            <li #liDT>TareaTres: {{descripcionTarea[2]}}</li>
           </ul>
     </div>
     <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalLab">Agregar Empleo</button>
@@ -26,16 +26,16 @@
                     <div class="col-3">
                         <label for="formNuevoEmpleo" class="form-label">Lugar de trabajo: </label>
                     </div>
-                    <div class="col-3">
-                        <input type="text" class="form-control" id="inputLT">
+                    <div class="col-6">
+                        <input #inputLT type="text" class="form-control" id="inputLT" (keyup.enter)="guardarDatos($event)">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-3">
-                        <label for="formNuevoEmpleo" class="form-label">Tarea realizada: </label>
+                        <label for="formNuevoEmpleo" class="form-label">Descripción de la Tarea: </label>
                     </div>
-                    <div class="col-3">
-                        <input type="text" class="form-control" id="inputTR">
+                    <div class="col-6">
+                        <input #inputDT type="text" class="form-control" id="inputDT">
                     </div>
                 </div>
           <div class="mt-2 pt-2 border-top">

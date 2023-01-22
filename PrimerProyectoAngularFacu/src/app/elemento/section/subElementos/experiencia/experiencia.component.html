@@ -27,7 +27,7 @@
                         <label for="formNuevoEmpleo" class="form-label">Lugar de trabajo: </label>
                     </div>
                     <div class="col-6">
-                        <input #inputLT type="text" class="form-control" id="inputLT">
+                        <input #inputLT type="text" class="form-control" id="inputLT" [(ngModel)]="restInputLT">
                     </div>
                 </div>
                 <div class="row">
@@ -35,7 +35,7 @@
                         <label for="formNuevoEmpleo" class="form-label">Descripción de la Tarea: </label>
                     </div>
                     <div class="col-6">
-                        <input #inputDT type="text" class="form-control" id="inputDT">
+                        <input #inputDT type="text" class="form-control" id="inputDT" [(ngModel)]="restInputDT">
                     </div>
                 </div>
           <div class="mt-2 pt-2 border-top">

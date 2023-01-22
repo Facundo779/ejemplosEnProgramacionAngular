@@ -11,6 +11,8 @@ export class ExperienciaComponent implements OnInit, AfterViewInit {
 
   lugarDeTrabajo: any[];
   descripcionTarea: any[];
+  restInputLT: string;
+  restInputDT: string;
  
   @ViewChildren('liLT') conjLiLT!: QueryList<ElementRef<HTMLLIElement>>;
   @ViewChildren('liDT') conjLiDT!: QueryList<ElementRef<HTMLLIElement>>;
@@ -19,8 +21,14 @@ export class ExperienciaComponent implements OnInit, AfterViewInit {
 
   guardarDatos(varLT:any, varDT:any):void{
     //console.log('click');
-    this.lugarDeTrabajo.push(varLT); 
-    this.descripcionTarea.push(varDT); 
+    if(varLT&&varDT!==""){
+      this.lugarDeTrabajo.push(varLT); 
+      this.descripcionTarea.push(varDT); 
+      this.restInputLT = ""; 
+      this.restInputDT = "";
+    }else{
+      
+    }
     //this.descripcionTarea.push(this.entradaDT); 
     console.log(this.lugarDeTrabajo);
     console.log(this.descripcionTarea);
@@ -30,7 +38,8 @@ export class ExperienciaComponent implements OnInit, AfterViewInit {
   constructor() { 
     this.lugarDeTrabajo = [];
     this.descripcionTarea = [];
-    
+    this.restInputLT = "";
+    this.restInputDT = "";
   }
   
   ngOnInit(): void {

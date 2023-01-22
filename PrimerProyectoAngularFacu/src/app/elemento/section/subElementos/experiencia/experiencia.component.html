@@ -27,7 +27,7 @@
                         <label for="formNuevoEmpleo" class="form-label">Lugar de trabajo: </label>
                     </div>
                     <div class="col-6">
-                        <input #inputLT type="text" class="form-control" id="inputLT" (keyup.enter)="guardarDatos($event)">
+                        <input #inputLT type="text" class="form-control" id="inputLT">
                     </div>
                 </div>
                 <div class="row">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
           <div class="mt-2 pt-2 border-top">
-            <button type="button" class="btn btn-primary btn-sm">Guardar datos</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="guardarDatos(inputLT.value, inputDT.value)">Guardar datos</button>
             <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>

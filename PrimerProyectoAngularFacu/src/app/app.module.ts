@@ -9,6 +9,7 @@ import { AcercaDEComponent } from './elemento/section/subElementos/acerca-de/ace
 import { ExperienciaComponent } from './elemento/section/subElementos/experiencia/experiencia.component';
 import { FormsModule } from '@angular/forms';
 import { SetAttribTempComponent } from './elemento/section/subElementos/set-attrib-temp/set-attrib-temp.component';
+import { SetAttribConsetDatosComponent } from './elemento/section/subElementos/set-attrib-conset-datos/set-attrib-conset-datos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SetAttribTempComponent } from './elemento/section/subElementos/set-attr
     FooterComponent,
     AcercaDEComponent,
     ExperienciaComponent,
-    SetAttribTempComponent
+    SetAttribTempComponent,
+    SetAttribConsetDatosComponent,
   ],
   imports: [
     BrowserModule,

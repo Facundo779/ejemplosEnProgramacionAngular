@@ -71,23 +71,7 @@ export class SetAttribTempComponent implements OnInit, AfterViewInit {
         console.log(pT.nativeElement.getAttribute('name'));
         console.log(pT.nativeElement.getAttribute('nameb')); 
       });   */
-  }
-
-   modifDatosLab():void{
-    this.conjParrfLT.forEach((pLT)=>{
-      pLT.nativeElement.addEventListener('click', ()=>{
-        //this.lugarDeTrabajo.push(`${prompt('')}`);
-        //this.lugarDeTrabajo.splice(this.iterante-1, 1, `${prompt('')}`);
-        switch(pLT.nativeElement.getAttribute('nameLT')){
-          case 'varLT' + this.iterante: 
-            //console.log(pLT.nativeElement.getAttribute('nameLT'));
-            this.lugarDeTrabajo.splice(this.iterante-1, 1, `${prompt('')}`);
-          break;
-        }
-        console.log(this.lugarDeTrabajo[this.iterante-1]);
-        console.log(this.lugarDeTrabajo);
-      });
-    })
+    
     /* //Es funcional 
     this.numDeTempAIterar = this.parTemp.length;
     for(this.iteranteTemp; this.iteranteTemp <= this.numDeTempAIterar; this.iteranteTemp++){

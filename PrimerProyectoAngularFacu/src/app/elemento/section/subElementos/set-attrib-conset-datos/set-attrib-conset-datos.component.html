@@ -2,14 +2,25 @@
 <div class="col-3">
     <p>Experiencia laboral</p>
     <div class="p-3 bg-info bg-opacity-10 border border-info border-start-1 rounded-start border-end-0">
-        <p>Empleos cargados: </p>
-        <ng-template #temBaseDos>
-            <div #divTemp id="divTemp" name="divTemp" nameb="divTemp">
-                <li>
-                    <p #prrfLT namelt="varLT">Empleo: {{lugarDeTrabajoDos[0]}}</p>
-                    <p #prrfDT namedt="varDT">Tarea: {{descripcionTareaDos[0]}}</p>
-                </li>
+        <h4>Empleos cargados</h4>
+        <!-- 
+            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+            <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
             </div>
+         -->
+        <ng-template #temBaseDos>
+                <div class="border-3 border-bottom" #divTemp id="divTemp" name="divTemp" nameb="divTemp">    
+                    <h5>Título: </h5><p #prrfTE namete="varTE"></p>
+                    <h5>Lugar: </h5><p #prrfLT namelt="varLT"></p>
+                    <h5>Descripción tarea: </h5><p #prrfDT namedt="varDT"></p>
+                </div>
         </ng-template>
     </div>
     <button type="button" id="nuevaSeccion" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalLabDos">Agregar Empleo</button>
@@ -18,7 +29,15 @@
         <div class="modal-content">
         <div class="modal-body">
             <p>Ingrese los datos correspondientes.</p>
-                <div class="row">
+                <div class="row m-3">
+                    <div class="col-3">
+                        <label for="formNuevoEmpleo" class="form-label">Titulo: </label>
+                    </div>
+                    <div class="col-6">
+                        <input #inputTEDos type="text" class="form-control" id="inputTE" [(ngModel)]="restInputTEDos">
+                    </div>
+                </div>
+                <div class="row m-3">
                     <div class="col-3">
                         <label for="formNuevoEmpleo" class="form-label">Lugar de trabajo: </label>
                     </div>
@@ -26,7 +45,7 @@
                         <input #inputLTDos type="text" class="form-control" id="inputLT" [(ngModel)]="restInputLTDos">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row m-3">
                     <div class="col-3">
                         <label for="formNuevoEmpleo" class="form-label">Descripción de la Tarea: </label>
                     </div>
@@ -35,7 +54,7 @@
                     </div>
                 </div>
           <div class="mt-2 pt-2 border-top">
-            <button type="button" class="btn btn-primary btn-sm me-3" (click)="guardarDatosDos(inputLTDos.value, inputDTDos.value)">Guardar datos</button>
+            <button type="button" class="btn btn-primary btn-sm me-3" (click)="guardarDatosDos(inputTEDos.value, inputLTDos.value, inputDTDos.value)">Guardar datos</button>
             <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>

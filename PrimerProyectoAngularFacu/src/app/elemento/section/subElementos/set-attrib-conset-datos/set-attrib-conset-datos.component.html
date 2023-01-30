@@ -16,7 +16,10 @@
             </div>
          -->
         <ng-template #temBaseDos>
-                <div class="border-3 border-bottom" #divTemp id="divTemp" name="divTemp" nameb="divTemp">    
+                <div class="border-3 border-bottom border-top" #divTemp id="divTemp" name="divTemp" nameb="divTcbes"> 
+                    <div class="row">
+                        <input #cbES [hidden]="visibCB" type="checkbox" class="mt-3" name="divTcbes">
+                    </div>   
                     <h5>Título: </h5><p #prrfTE namete="varTE"></p>
                     <h5>Lugar: </h5><p #prrfLT namelt="varLT"></p>
                     <h5>Descripción tarea: </h5><p #prrfDT namedt="varDT"></p>
@@ -24,11 +27,16 @@
         </ng-template>
     </div>
     <button type="button" id="nuevaSeccion" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalLabDos">Agregar Empleo</button>
-    <div class="modal" id="modalLabDos">
+    <br>
+    <button type="button" id="seleccSeccAElim" class="btn btn-primary mt-3" (click)="eleccionSeccionAEliminar()">Seleccione empleos a eliminar</button>
+    <button type="button" id="eliminarSeccion" class="btn btn-primary mt-3" (click)="eliminarSeccion()">Eliminar empleos seleccionados</button>
+    <div #modalLabDos class="modal" id="modalLabDos">
         <div class="modal-dialog">
         <div class="modal-content">
-        <div class="modal-body">
-            <p>Ingrese los datos correspondientes.</p>
+        <div class="modal-body">            
+                <div class="row">
+                    <p>Ingrese los datos correspondientes.</p>
+                </div>
                 <div class="row m-3">
                     <div class="col-3">
                         <label for="formNuevoEmpleo" class="form-label">Titulo: </label>
@@ -54,9 +62,9 @@
                     </div>
                 </div>
           <div class="mt-2 pt-2 border-top">
-            <button type="button" class="btn btn-primary btn-sm me-3" (click)="guardarDatosDos(inputTEDos.value, inputLTDos.value, inputDTDos.value)">Guardar datos</button>
+            <button type="button" class="btn btn-primary btn-sm me-3" data-bs-dismiss="modal" (click)="guardarDatosDos(inputTEDos.value, inputLTDos.value, inputDTDos.value)">Guardar datos</button> 
             <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
-          </div>
+            </div>
         </div>
       </div>
 </div>
